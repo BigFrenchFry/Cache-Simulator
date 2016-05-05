@@ -1,10 +1,10 @@
-FILES := src/cache.c src/trace.c
+FILES := src/cache.c src/trace.c src/queue.c
 
 cacheSim: $(FILES)
-	gcc -o $@ $^ -O3
+	gcc -o $@ $^ -O3 -lm
 
 cacheSimDebug: $(FILES)
-	gcc -o $@ $^ -g
+	gcc -o $@ $^ -g -lm
 
 clean:
 	rm -rf cacheSimDebug.dSYM
